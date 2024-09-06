@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     environment {
-        PROJECT_ID = 'onecom-operations'
-        REGISTRY_LOCATION = 'europe-west2'
-        REGISTRY_NAME = 'git-repo' // Artifact Registry repository name
+        PROJECT_ID = 'qa-nextgen'
+        REGISTRY_LOCATION = 'us-central1'
+        REGISTRY_NAME = 'gcp-repo' // Artifact Registry repository name
         IMAGE_TAG = "${env.BUILD_ID}" // Tag image with Jenkins build ID
-        IMAGE_NAME = 'test-image2' // Define your Docker image name
+        IMAGE_NAME = 'helloworld' // Define your Docker image name
         GOOGLE_CLOUD_KEYFILE_JSON = credentials('gcp-key')
     }
 
